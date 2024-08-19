@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'Nuxt Starter Template',
+      title: 'Vendora',
       // link: [
       //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       //   { rel: 'icon', type: 'image/png', href: '/favicons/favicon-16x16.png', sizes: '16x16' },

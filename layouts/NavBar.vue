@@ -22,7 +22,7 @@
           size="small"
           severity="contrast"
           as="a"
-          href="https://github.com/ratul16/nuxt3-starter-template"
+          href="https://github.com/ratul16/vendora/"
           target="_blank"
           rel="noopener"
         />
@@ -44,49 +44,17 @@ const { isDark, toggleTheme } = useTheme();
 const items = ref([
   {
     label: "Home",
-    icon: "pi pi-home",
+    icon: "pi pi-chart-pie",
     route: "/",
   },
   {
-    label: "Users",
-    icon: "pi pi-users",
-    route: "/users",
+    label: "My Cart",
+    icon: "pi pi-cart-plus",
+    route: "/cart",
   },
   {
-    label: "Projects",
-    icon: "pi pi-search",
-    items: [
-      {
-        label: "Components",
-        icon: "pi pi-bolt",
-      },
-      {
-        label: "Blocks",
-        icon: "pi pi-server",
-      },
-      {
-        label: "UI Kit",
-        icon: "pi pi-pencil",
-      },
-      {
-        label: "Templates",
-        icon: "pi pi-palette",
-        items: [
-          {
-            label: "Apollo",
-            icon: "pi pi-palette",
-          },
-          {
-            label: "Ultima",
-            icon: "pi pi-palette",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Contact",
-    icon: "pi pi-envelope",
+    label: "SignIn",
+    icon: "pi pi-user",
   },
 ]);
 </script>

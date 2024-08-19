@@ -13,7 +13,7 @@ export const useTheme = () => {
     valueLight: '',             // Class applied when light mode is active
   });
 
-  // isDark.value = preferredDark
+  isDark.value = false
 
   // Toggle function to switch between dark and light mode
   const toggleTheme = useToggle(isDark);

@@ -1,7 +1,6 @@
 <template>
   <div>
     <HelloWorld :message="global.appName" />
-    <ComponentOverview />
   </div>
 </template>
 
