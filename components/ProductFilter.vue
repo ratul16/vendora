@@ -65,10 +65,10 @@ const rating = ref(null);
       <p class="my-2">Rating</p>
       <Rating v-model="rating" :stars="5">
         <template #onicon>
-          <i class="pi pi-star-fill" style="font-size: 1.75rem; color: var(--p-primary-color)" />
+          <i class="pi pi-star-fill" style="font-size: 1.65rem; color: var(--p-yellow-400)" />
         </template>
         <template #officon>
-          <i class="pi pi-star" style="font-size: 1.75rem" />
+          <i class="pi pi-star" style="font-size: 1.65rem; color: var(--p-yellow-400)" />
         </template>
       </Rating>
     </div>
@@ -77,6 +77,7 @@ const rating = ref(null);
 
 <style lang="scss" scoped>
 .filter {
+  background-color: var(--p-dataview-content-background);
   padding: 15px;
   border-radius: 5px;
   .header,

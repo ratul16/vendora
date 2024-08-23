@@ -34,7 +34,7 @@ const CustomTheme = definePreset(Theme, {
       dark: {
         primary: {
           color: '{blue.200}',
-          inverseColor: '{blue.950}',
+          inverseColor: '{blue.800}',
           hoverColor: '{blue.400}',
           activeColor: '{blue.300}',
         },

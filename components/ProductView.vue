@@ -29,7 +29,7 @@ const options = ref(["list", "grid"]);
     </template>
 
     <template #list="slotProps">
-      <div class="flex flex-column gap-2">
+      <div class="product-list">
         <div v-for="(item, index) in slotProps.items" :key="index">
           <ProductCard :product="item" />
         </div>
@@ -47,6 +47,38 @@ const options = ref(["list", "grid"]);
 </template>
 
 <style lang="scss" scoped>
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  :deep(.product-card) {
+    display: flex;
+    justify-content: flex-start;
+    .cover {
+      width: 340px;
+      img {
+        width: 100%;
+      }
+    }
+    .rating {
+      left: 10px;
+      right: auto;
+    }
+    .content-body {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  @include media-queries("mobile") {
+    :deep(.product-card) {
+      flex-direction: column;
+      .cover {
+        width: 100%;
+      }
+    }
+  }
+}
 :deep(.p-dataview-header) {
   // background-color: $background-color;
   box-shadow: 0 0.5rem 1rem rgba(#333, 0.1);
