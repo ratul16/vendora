@@ -19,7 +19,8 @@ const options = ref(["list", "grid"]);
     :rows="layout === 'list' ? 10 : 9"
   >
     <template #header>
-      <div class="flex justify-content-end">
+      <div class="flex align-items-center justify-content-between">
+        <h3 class="my-0">{{ productList.length }} results</h3>
         <SelectButton v-model="layout" :options="options" :allowEmpty="false">
           <template #option="{ option }">
             <i :class="[option === 'list' ? 'pi pi-bars' : 'pi pi-table']" />

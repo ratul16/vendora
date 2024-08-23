@@ -1,10 +1,15 @@
 <script setup>
+import { useProductStore } from "~/store/product";
+const storeProduct = useProductStore();
 const route = useRoute();
+
+const product = storeProduct.getSelectedProduct;
 </script>
 
 <template>
   <div>
-    {{ route.params.id }}
+    <ProductGallery :url="product.coverImage" />
+    {{ product }}
   </div>
 </template>
 

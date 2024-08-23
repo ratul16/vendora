@@ -1,21 +1,32 @@
 <script setup>
+import { useProductStore } from "~/store/product";
+const storeProduct = useProductStore();
+
 const props = defineProps({
   product: {
     type: Object,
     default: () => {},
   },
 });
+
+const router = useRouter();
+
+const getProductDetails = (data) => {
+  console.log("data", data);
+  router.push({ name: "product-id", params: { id: data.id } });
+  storeProduct.setProduct(data);
+};
 </script>
 
 <template>
   <div class="shadow-2 product-card">
-    <div class="cover">
+    <div class="cover" @click="getProductDetails(props.product)">
       <img
         class="block xl:block mx-auto w-full"
         :src="props.product.coverImage"
         :alt="props.product.name"
       />
-      <div class="rating">
+      <div class="rating shadow-2">
         <span class="text-surface-900 font-medium text-sm">{{ props.product.rating }}</span>
         <i class="pi pi-star-fill" />
       </div>
