@@ -38,9 +38,10 @@ const props = defineProps({
     .cube {
       width: 80px;
       height: 80px;
-      border: 1px solid $border-variant-4;
+      border: 1px solid $border-variant-1;
       border-radius: 5px;
       overflow: hidden;
+      cursor: pointer;
       transition: $transition;
 
       img {
@@ -50,8 +51,9 @@ const props = defineProps({
         object-position: top;
       }
       &:hover {
-        border-color: $border-variant-1;
-        box-shadow: 0 0.5rem 1rem rgba($theme-color, 0.25);
+        // @include shadow($background-color);
+        border-color: $border-variant-4;
+        box-shadow: 0 0.5rem 1rem rgba($background-color, 0.25);
       }
     }
   }
@@ -59,6 +61,8 @@ const props = defineProps({
     position: relative;
     width: 100%;
     height: 500px;
+    cursor: pointer;
+    @include shadow($background-color);
     img {
       width: 100%;
       height: 100%;

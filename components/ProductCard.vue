@@ -74,7 +74,7 @@ const getProductDetails = (data) => {
   .content-body {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 16px;
   }
 
   .rating {

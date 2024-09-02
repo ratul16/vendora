@@ -57,7 +57,7 @@ const options = ref(["list", "grid"]);
     display: flex;
     justify-content: flex-start;
     .cover {
-      width: 340px;
+      width: 440px;
       img {
         width: 100%;
       }
